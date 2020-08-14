@@ -21,10 +21,10 @@ public class MergeObjectTest {
 		ses=HibernateUtil.getSession();
 		//prepare object
 		member=new Membership();
-		member.setMid(6L);
-		member.setMname("Neha");
-		member.setAddrs("Mariahu");
-		member.setRewardspoints(70L);
+		member.setMid(1L);
+		member.setMname("Mukesh");
+		member.setAddrs("Siria");
+		member.setRewardspoints(77L);
 		try {
 			//begin transaction
 			tx=ses.beginTransaction();
