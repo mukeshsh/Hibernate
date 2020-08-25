@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+      <class name="com.nt.entity.Product" table="product" dynamic-insert="false">
+                 <id name="pid" type="int" column="PID">
+                     <generator class="identity"/>
+                 </id>
+                 <property name="pname" type="string"  column="PNAME"/>
+                 <property name="price" type="float" column="PRICE"/>
+                 <property name="qty"  type="float"  column="QTY"/>
+</class>
+</hibernate-mapping>

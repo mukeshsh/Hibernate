@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+      <class name="com.nt.entity.Product" table="Product" dynamic-insert="false">
+                 <id name="pid" type="int" column="PID">
+                   <!--   <generator class="hilo"><param name="table">HI_TAB</param> 
+                     <param name="column">HI_COL</param><param name="max_lo">100</param></generator> -->
+                   <!--   <generator class="hilo"><param name="max_lo">5</param></generator> -->
+                   <!-- <generator class="hilo"/> -->
+                   <generator class="seqhilo"><param name="sequence">pid_seq</param><param name="max_lo">5</param></generator>
+                 </id>
+                
+                <property name="pname"  type="string"  column="PNAME"/>
+                 <property name="price"  type="float" column="PRICE"/>
+                 <property name="qty"  type="float"  column="QTY"/>
+</class>
+</hibernate-mapping>
