@@ -1,0 +1,24 @@
+package com.nt.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.TableGenerator;
+
+import lombok.Data;
+
+@Data
+@Entity
+public class Product implements Serializable {
+	@Id
+	@TableGenerator(name="gen1",pkColumnName = "id_col",valueColumnName = "id_val",pkColumnValue = "pid",table = "id_tab",initialValue = 10,allocationSize = 10)
+	@GeneratedValue(generator = "gen1",strategy = GenerationType.TABLE)
+	private int pid;
+	private String pname;
+	private Float price;
+	private float qty;
+
+}
